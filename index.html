@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Clima</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="simulador-clima">
+        <input type="text" id="resultado" disabled placeholder="Ingresa la temperatura">
+        <div class="botones">
+            <button onclick="agregarTemperatura('10')">10</button>
+            <button onclick="agregarTemperatura('20')">20</button>
+            <button onclick="agregarTemperatura('30')">30</button>
+            <button onclick="agregarTemperatura('40')">40</button>
+            <button onclick="agregarTemperatura('50')">50</button>
+            <button onclick="agregarTemperatura('60')">60</button>
+            <button onclick="agregarTemperatura('0')">0</button>
+            <button onclick="limpiar()">C</button>
+            <button onclick="mostrarClima()">Mostrar Clima ☀️❄️</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
