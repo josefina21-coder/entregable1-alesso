@@ -2,25 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Temperatura y Usuario</title>
-    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Medidor de Temperatura</title>
 </head>
 <body>
-
-    <h2>Bienvenido/a</h2>
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" placeholder="Escribe tu nombre">
-    <button id="btnNombre">Ingresar</button>
-    <p id="mensajeBienvenida"></p>
-
-    <h3>Temperaturas</h3>
-    <input type="number" id="tempInput" placeholder="Ingresa una temperatura en °C"><br>
-    <button id="btnAgregar">Agregar</button>
-    <button id="btnMostrar">Mostrar Climas</button>
-    <button id="btnLimpiar">Limpiar</button>
-
-    <ul id="listaTemperaturas"></ul>
-
-    <script src="script.js"></script>
+    <div class="medidor-temperatura">
+        <h1>Medidor de Temperatura</h1>
+        <label for="grados">Ingrese la temperatura:</label>
+        <input type="number" id="grados" placeholder="Ej: 25">
+        <select id="tipoConversion">
+        <option value="cToF">Celsius a Fahrenheit</option>
+        <option value="fToC">Fahrenheit a Celsius</option>
+        </select>
+        <button onclick="convertirTemperatura()">Convertir</button>
+        <p id="resultado"></p>
+        <div id="termometro-container">
+            <div id="termometro">
+            <div id="nivel-temperatura"></div>
+            </div>
+        </div>
+    <button onclick="mostrarHistorial()">Ver Historial</button>
+    <div id="historial"></div>
+    <button onclick="borrarHistorial()">Borrar Historial</button>
+    </div>
+<script src="js/script.js"></script>
 </body>
 </html>
